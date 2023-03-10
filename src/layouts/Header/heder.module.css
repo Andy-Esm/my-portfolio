@@ -1,0 +1,11 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 24px 0;
+}
+.menuWrapper {
+	display: flex;
+	align-items: center;
+	gap: 34px;
+}

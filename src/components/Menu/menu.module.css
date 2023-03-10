@@ -1,0 +1,48 @@
+.navList {
+	display: flex;
+	gap: 34px;
+	list-style: none;
+}
+
+@media (max-width: 782px) {
+	.navList {
+		display: none;
+	}
+}
+
+.navLink {
+	text-decoration: none;
+	color: var(--text-clr-secondary);
+	font-size: var(--fs-main);
+	font-family: var(--ff-heading);
+
+	transition: color 0.2s ease-in;
+}
+
+.navLink:hover {
+	color: var(--accent-clr);
+	border-color: var(--accent-clr);
+}
+
+.active {
+	@apply py-1 border-b;
+	color: var(--red-accent);
+	border-color: var(--red-accent);
+}
+
+.mobileWrapper {
+	@apply md:hidden flex flex-1 justify-end items-center relative;
+}
+.mobileNav {
+	@apply p-6  absolute top-[50px] left-0   min-w-[140px] z-10 rounded-xl;
+	background-color: var(--text-clr-main);
+}
+
+.navListMobile {
+	color: var(--text-clr-secondary);
+}
+
+.burgerIcon {
+	@apply cursor-pointer w-[28px] h-[28px] object-contain;
+	fill: #fff;
+}

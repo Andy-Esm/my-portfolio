@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700;800&family=Russo+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--ff-main: 'Nunito', sans-serif;
+	--ff-heading: 'Russo One', sans-serif;
+
+	/*Colors*/
+	--bg-clr-main: #1e1e1e;
+	--text-clr-main: #ccd7f7;
+	--text-clr-secondary: #8891b0;
+	--accent-clr: #08fcd8;
+	--red-accent: #df506e;
+
+	--fs-lg: 24px;
+	--fs-main: 16px;
+	--fs-md: 18px;
+	--fs-sm: 14px;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+body {
+	min-height: 100vh;
+	font-family: var(--ff-main);
+	font-size: var(--ff-main);
+	background-color: var(--bg-clr-main);
+	color: var(--text-clr-main);
+}
+
+.container {
+	width: 100%;
+	max-width: 1440px;
+	padding: 0 1rem;
+	margin-inline: auto;
+}
+.title {
+	font-family: var(--ff-heading);
+	color: var(--accent-clr);
+	font-size: var(--fs-lg);
+	text-transform: capitalize;
+}

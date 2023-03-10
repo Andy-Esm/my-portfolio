@@ -1,0 +1,58 @@
+.hero {
+	position: relative;
+	padding: 200px 0;
+	margin: 0 0 100px 0;
+}
+
+.decorRed {
+	position: absolute;
+	top: 80px;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	border: 5px dashed var(--red-accent);
+	border-radius: 50%;
+	background: var(--bg-clr-main);
+}
+.decorBlue {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	border: 5px dashed var(--accent-clr);
+	border-radius: 50%;
+	background: var(--bg-clr-main);
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.titleBlock {
+	padding: 0 0 0 100px;
+	grid-column: 2 / 3;
+	grid-row: -2/ -1;
+}
+
+.title {
+	font-family: var(--ff-heading);
+	font-weight: 400;
+	font-size: 96px;
+	line-height: 116px;
+	letter-spacing: 0.02em;
+
+	color: var(--text-clr-main);
+}
+
+span {
+	display: inline-block;
+}
+
+.accentRed {
+	color: var(--red-accent);
+}
+.accentGreen {
+	color: var(--accent-clr);
+}
