@@ -1,0 +1,36 @@
+.aboutMe {
+	margin-inline: auto;
+	margin: 0 0 60px 0;
+}
+.aboutTitle {
+	margin: 0 0 40px 0;
+	text-align: center;
+}
+.wrapper {
+	display: grid;
+	grid-template-columns: 30% 1fr 30%;
+	place-items: center;
+	gap: 20px;
+}
+.imgBox {
+	border: 5px dashed var(--accent-clr);
+}
+
+.img {
+	padding: 10px;
+}
+
+.aboutText {
+	align-self: start;
+}
+
+.aboutTextItem {
+	line-height: 1.7;
+	margin: 0 0 20px 0;
+	max-width: 600px;
+	width: 100%;
+}
+
+.accent {
+	color: var(--accent-clr);
+}

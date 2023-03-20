@@ -1,0 +1,18 @@
+.footer {
+	padding: 20px 0;
+}
+
+.copyright {
+	display: block;
+	font-size: var(--fs-sm);
+	text-align: center;
+}
+.footerLink {
+	padding: 0 0 6px 0;
+	color: var(--accent-clr);
+}
+
+.footerLink:hover {
+	color: var(--red-accent);
+	border-bottom: 1px solid var(--red-accent);
+}

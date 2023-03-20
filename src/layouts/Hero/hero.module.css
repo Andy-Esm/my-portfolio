@@ -45,7 +45,7 @@
 	font-size: 96px;
 	line-height: 116px;
 	letter-spacing: 0.02em;
-
+	margin: 0 0 20px 0;
 	color: var(--text-clr-main);
 }
 
@@ -58,4 +58,21 @@ span {
 }
 .accentGreen {
 	color: var(--accent-clr);
+}
+
+.social {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.socialLink {
+	border: 2px solid var(--text-clr-main);
+	padding: 16px;
+	border-radius: 50%;
+
+	transition: all 0.2s ease;
+}
+.socialLink:hover {
+	transform: scale(1.1);
+	border: 2px dashed var(--accent-clr);
 }

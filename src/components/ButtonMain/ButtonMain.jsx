@@ -1,8 +1,8 @@
 import React from 'react';
 import style from './button-main.module.css';
-const ButtonMain = ({title}) => {
+const ButtonMain = ({title, type}) => {
 	return (
-		<button type="button" className={style.btnMain}>
+		<button type={type} className={style.btnMain}>
 			{title}
 		</button>
 	);
