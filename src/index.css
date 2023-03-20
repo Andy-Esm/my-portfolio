@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700;800&family=Russo+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700;800&family=Russo+One&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -15,7 +15,7 @@
 	--accent-clr: #08fcd8;
 	--red-accent: #df506e;
 
-	--fs-lg: 24px;
+	--fs-lg: 32px;
 	--fs-main: 16px;
 	--fs-md: 18px;
 	--fs-sm: 14px;
