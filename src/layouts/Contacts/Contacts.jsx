@@ -5,6 +5,7 @@ import {slideIn} from '../../utils/motion';
 import styles from './contacts.module.css';
 import emailjs from '@emailjs/browser';
 import icons from '../../assets/icons.svg';
+import {CircleDecoration} from '../../components';
 const Contacts = () => {
 	const forRef = useRef();
 	const [form, setForm] = useState({
@@ -65,6 +66,8 @@ const Contacts = () => {
 						Если вы хотите что-то спросить, предложить работу или участие в проекте,
 						то пишите
 					</p>
+					<CircleDecoration className={styles.decorBlue} />
+					<CircleDecoration className={styles.decorRed} />
 					<form ref={forRef} onSubmit={handleSubmit} className={styles.form}>
 						<label htmlFor="">
 							<input

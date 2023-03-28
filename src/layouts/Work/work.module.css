@@ -7,6 +7,10 @@
   margin: 0 0 100px 0;
 }
 
+.redAccent {
+  color: var(--red-accent);
+}
+
 .workWrapper{
   display: flex;
   justify-content: center;
@@ -41,6 +45,11 @@
   margin: 0 0 6px 0;
   font-size: var(--fs-sm);
   line-height: 19px;
+}
+
+.companyLink{
+  cursor: pointer;
+  display: inline-block;
 }
 .companyLinkIcon{
   fill: var(--text-clr-main);
@@ -80,7 +89,8 @@
 .workImgBox{
   grid-column: 2/3;
 
-  /*border: 5px dashed var(--accent-clr);*/
+  border-left: 5px dashed var(--accent-clr);
+  border-bottom: 5px dashed var(--accent-clr);
 }
 .workImage{
   filter: brightness(90%) saturate(0%);
@@ -91,4 +101,20 @@
 
 .workImage:hover{
   filter: brightness(100%) saturate(100%);
+}
+
+.workSkills{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+}
+
+.skillsItem{
+  font-size: var(--fs-sm);
+  line-height: 19px;
+  color: var(--text-clr-main);
+  background-color: var(--red-accent);
+  padding: 4px 8px;
+  border-radius: 4px;
 }

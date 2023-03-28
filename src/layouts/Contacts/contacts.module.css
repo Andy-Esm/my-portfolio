@@ -15,9 +15,36 @@
 }
 
 .formWrapper {
+  position: relative;
 	display: grid;
+  grid-auto-columns: auto 1fr auto;
 	place-items: center;
 }
+
+.decorBlue {
+  position: absolute;
+  top: 55%;
+  right: 15%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border: 5px dashed var(--accent-clr);
+  border-radius: 50%;
+  background: var(--bg-clr-main);
+}
+
+.decorRed {
+  position: absolute;
+  top: 55%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border: 5px dashed var(--red-accent);
+  border-radius: 50%;
+  background: var(--bg-clr-main);
+}
+
 .form {
 	width: 100%;
 	max-width: 555px;
@@ -25,6 +52,8 @@
 	flex-direction: column;
 	gap: 12px;
 }
+
+
 
 .input,
 .textarea {

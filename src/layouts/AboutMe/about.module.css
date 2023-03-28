@@ -14,7 +14,8 @@
 	gap: 20px;
 }
 .imgBox {
-	border: 5px dashed var(--accent-clr);
+	border-right: 5px dashed var(--red-accent);
+	border-top: 5px dashed var(--red-accent);
   grid-row: 1/2;
   grid-column: 1/2;
 }
