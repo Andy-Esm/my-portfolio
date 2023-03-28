@@ -4,6 +4,14 @@
 	margin: 0 0 100px 0;
 }
 
+.heroIcon{
+  width: 34px;
+  height: 32px;
+  fill: var(--text-clr-main);
+}
+
+
+
 .decorRed {
 	position: absolute;
 	top: 80px;
@@ -75,4 +83,6 @@ span {
 .socialLink:hover {
 	transform: scale(1.1);
 	border: 2px dashed var(--accent-clr);
+
 }
+

@@ -6,7 +6,7 @@
 	margin: 0 0 20px 0;
 }
 .accent {
-	color: var(--text-clr-main);
+	color: var(--red-accent);
 }
 .contactsDesc {
 	margin: 0 0 20px 0;
@@ -16,7 +16,6 @@
 
 .formWrapper {
 	display: grid;
-	grid-template-column: 1fr;
 	place-items: center;
 }
 .form {
@@ -44,4 +43,17 @@
 .socialLinks {
 	display: flex;
 	gap: 8px;
+}
+
+.socialIcon {
+  width: 34px;
+  height: 32px;
+  fill: var(--text-clr-main);
+
+  transition: fill 0.2s ease, scale 0.2s ease;
+}
+
+.socialIcon:hover {
+  fill: var(--accent-clr);
+  transform: scale(1.1);
 }

@@ -1,7 +1,5 @@
 import React from 'react';
-import github from '../../assets/github.svg';
-import leetcode from '../../assets/leetcode.svg';
-import vk from '../../assets/vk.svg';
+import icons from '../../assets/icons.svg';
 import {BgHeroCanvas, CircleDecoration, SpanText} from '../../components';
 
 import style from './hero.module.css';
@@ -32,21 +30,27 @@ const Hero = () => {
 							className={style.socialLink}
 							target="_blank"
 						>
-							<img src={github} alt="ссылка на профиль github" />
+							<svg className={style.heroIcon}>
+								<use href={icons + '#github'} />
+							</svg>
 						</a>
 						<a
 							href="https://vk.com/andyesm"
 							className={style.socialLink}
 							target="_blank"
 						>
-							<img src={vk} alt="ссылка на профиль vkontakte" />
+							<svg className={style.heroIcon}>
+								<use href={icons + '#vk'} />
+							</svg>
 						</a>
 						<a
 							href="https://leetcode.com/Andy-Esm/"
 							className={style.socialLink}
 							target="_blank"
 						>
-							<img src={leetcode} alt="ссылка на профиль leetcode" />
+							<svg className={style.heroIcon}>
+								<use href={icons + '#leetcode'} />
+							</svg>
 						</a>
 					</div>
 				</div>
