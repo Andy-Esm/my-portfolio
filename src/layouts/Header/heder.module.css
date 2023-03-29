@@ -9,3 +9,19 @@
 	align-items: center;
 	gap: 34px;
 }
+.btnMain {
+	border: 1px solid var(--accent-clr);
+	background-color: transparent;
+	padding: 15px 46px;
+	border-radius: 6px;
+	font-family: var(--ff-heading);
+	color: var(--accent-clr);
+	cursor: pointer;
+
+	transition: all 0.3s ease-in-out;
+}
+
+.btnMain:hover {
+	background-color: var(--accent-clr);
+	color: #222;
+}

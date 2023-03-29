@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import logo from '../../assets/Logo.svg';
-import {ButtonMain, Menu} from '../../components';
+import {Menu} from '../../components';
 import style from './heder.module.css';
 
 const Header = () => {
@@ -22,7 +22,13 @@ const Header = () => {
 
 			<div className={style.menuWrapper}>
 				<Menu />
-				<ButtonMain title={'Резюме'} />
+				<a
+					className={style.btnMain}
+					href="../../../public/resume.pdf"
+					target="_blank"
+				>
+					Резюме
+				</a>
 			</div>
 		</header>
 	);

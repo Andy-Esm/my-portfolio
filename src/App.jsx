@@ -1,5 +1,6 @@
 import React from 'react';
 import {BrowserRouter} from 'react-router-dom';
+import './App.css';
 import {
 	AboutMe,
 	AnotherProjects,
@@ -13,17 +14,19 @@ import {
 const App = () => {
 	return (
 		<BrowserRouter>
-			<div className="container">
-				<Header />
-				<Hero />
-				<AboutMe />
-				<Work />
-				<AnotherProjects />
-				<div>
-					<Contacts />
+			<div className="app">
+				<div className="container">
+					<Header />
+					<Hero />
+					<AboutMe />
+					<Work />
+					<AnotherProjects />
+					<div>
+						<Contacts />
+					</div>
 				</div>
+				<Footer />
 			</div>
-			<Footer />
 		</BrowserRouter>
 	);
 };

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700;800&family=Russo+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700;800&family=Russo+One&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,18 +9,18 @@
 	--ff-heading: 'Russo One', sans-serif;
 
 	/*Colors*/
-	--bg-clr-main: #1e1e1e;
-  --bg-clr-secondary: #1B414E;
+	--bg-clr-main: #050817;
+	--bg-clr-secondary: #1b414e;
 	--text-clr-main: #ccd7f7;
 	--text-clr-secondary: #8891b0;
 	--accent-clr: #08fcd8;
 	--red-accent: #df506e;
 
-  /*Font sizes*/
+	/*Font sizes*/
 	--fs-lg: 32px;
-	--fs-main: 16px;
-	--fs-md: 18px;
-	--fs-sm: 14px;
+	--fs-main: 18px;
+	--fs-md: 21px;
+	--fs-sm: 16px;
 }
 
 * {
