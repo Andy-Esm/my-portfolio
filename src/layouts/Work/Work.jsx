@@ -1,8 +1,8 @@
 import React from 'react';
-import style from './work.module.css';
 import icons from '../../assets/icons.svg';
-import secrtSanta from '../../assets/secret-santa.jpg';
+import secretSanta from '../../assets/secret-santa.jpg';
 import {experiences} from '../../constants';
+import style from './work.module.css';
 
 const Work = () => {
 	return (
@@ -50,7 +50,7 @@ const Work = () => {
 								target="_blank"
 								rel="noreferrer"
 							>
-								<img src={secrtSanta} alt="" className={style.workImage} />
+								<img src={secretSanta} alt="" className={style.workImage} />
 							</a>
 						</div>
 					</div>

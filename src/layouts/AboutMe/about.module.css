@@ -8,7 +8,7 @@
 }
 .wrapper {
 	display: grid;
-	grid-template-columns:   30% 1fr 30%;
+	grid-template-columns: 30% 1fr auto;
 
 	place-items: center;
 	gap: 20px;
@@ -16,43 +16,66 @@
 .imgBox {
 	border-right: 5px dashed var(--red-accent);
 	border-top: 5px dashed var(--red-accent);
-  grid-row: 1/2;
-  grid-column: 1/2;
+	grid-row: 1/2;
+	grid-column: 1/2;
 }
 
 .img {
-  filter: brightness(90%) saturate(0%);
+	filter: brightness(90%) saturate(0%);
 	padding: 10px;
 
-  transition: filter 0.2s ease-in-out;
+	transition: filter 0.2s ease-in-out;
 }
 
 .img:hover {
-  filter: brightness(100%) saturate(100%);
-
-
+	filter: brightness(100%) saturate(100%);
 }
 
 .aboutText {
-
-  align-self: start;
-  grid-column: 2/2;
-  grid-row: 1/-1;
-
-
+	display: flex;
+	flex-wrap: wrap;
+	align-self: start;
+	min-height: 100%;
 }
 
 .aboutTextItem {
-	line-height: 1.5;
-	margin: 0 0 14px 0;
-	max-width: 600px;
 	width: 100%;
 }
 
+.aboutTextItem:last-child {
+	margin: 0 0 60px 0;
+}
+
 .accent {
-  font-family: var(--ff-heading);
+	font-family: var(--ff-heading);
 	color: var(--accent-clr);
 }
-.titleAccent{
-  color: var(--red-accent);
+.titleAccent {
+	color: var(--red-accent);
+}
+
+.skills {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.skillsTitle {
+	font-family: var(--ff-heading);
+	font-size: var(--fs-md);
+	color: var(--accent-clr);
+}
+
+.skillsWrapper {
+	display: flex;
+	gap: 8px;
+}
+
+.skillsItem {
+	font-size: var(--fs-sm);
+	line-height: 19px;
+	color: var(--text-clr-main);
+	background-color: var(--red-accent);
+	padding: 8px 12px;
+	border-radius: 4px;
 }

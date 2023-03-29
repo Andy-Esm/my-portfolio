@@ -90,4 +90,15 @@ const MENU_LINKS = [
 	},
 ];
 
-export {experiences, projects, MENU_LINKS};
+const skills = [
+	'Html',
+	'Css',
+	'Sass',
+	'Java Script',
+	'React',
+	'Gulp',
+	'Vite',
+	'Scrum',
+];
+
+export {experiences, projects, MENU_LINKS, skills};

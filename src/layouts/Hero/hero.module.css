@@ -4,13 +4,11 @@
 	margin: 0 0 100px 0;
 }
 
-.heroIcon{
-  width: 34px;
-  height: 32px;
-  fill: var(--text-clr-main);
+.heroIcon {
+	width: 34px;
+	height: 32px;
+	fill: var(--text-clr-main);
 }
-
-
 
 .decorRed {
 	position: absolute;
@@ -20,7 +18,7 @@
 	height: 50px;
 	border: 5px dashed var(--red-accent);
 	border-radius: 50%;
-	background: var(--bg-clr-main);
+	background: transparent;
 }
 .decorBlue {
 	position: absolute;
@@ -30,7 +28,7 @@
 	height: 50px;
 	border: 5px dashed var(--accent-clr);
 	border-radius: 50%;
-	background: var(--bg-clr-main);
+	background: transparent;
 }
 
 .wrapper {
@@ -83,6 +81,4 @@ span {
 .socialLink:hover {
 	transform: scale(1.1);
 	border: 2px dashed var(--accent-clr);
-
 }
-
