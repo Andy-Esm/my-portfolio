@@ -1,21 +1,21 @@
 .hero {
 	position: relative;
-	padding: 100px 0;
-	margin: 0 0 100px 0;
+	padding: var(--gap-100) 0;
+	margin: 0 0 var(--gap-100) 0;
 }
 
 .heroIcon {
-	width: 34px;
-	height: 32px;
+	width: 2.125rem;
+	height: 2rem;
 	fill: var(--text-clr-main);
 }
 
 .decorRed {
 	position: absolute;
-	top: 80px;
+	top: 5rem;
 	right: 0;
-	width: 50px;
-	height: 50px;
+	width: 3.125rem;
+	height: 3.125rem;
 	border: 5px dashed var(--red-accent);
 	border-radius: 50%;
 	background: transparent;
@@ -24,8 +24,8 @@
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	width: 50px;
-	height: 50px;
+	width: 3.125rem;
+	height: 3.125rem;
 	border: 5px dashed var(--accent-clr);
 	border-radius: 50%;
 	background: transparent;
@@ -34,12 +34,11 @@
 .wrapper {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-
-	min-height: 700px;
+	min-height: 43.75;
 }
 
 .titleBlock {
-	padding: 0 0 0 100px;
+	padding: 0 0 0 var(--gap-100);
 	align-self: center;
 	grid-column: 2 / 3;
 	grid-row: -2/ -1;
@@ -48,10 +47,10 @@
 .title {
 	font-family: var(--ff-heading);
 	font-weight: 400;
-	font-size: 96px;
-	line-height: 116px;
+	font-size: 6rem;
+	line-height: 7.25rem;
 	letter-spacing: 0.02em;
-	margin: 0 0 20px 0;
+	margin: 0 0 var(--gap-lg) 0;
 	color: var(--text-clr-main);
 }
 
@@ -69,11 +68,11 @@ span {
 .social {
 	display: flex;
 	align-items: center;
-	gap: 20px;
+	gap: var(--gap-lg);
 }
 .socialLink {
 	border: 2px solid var(--text-clr-main);
-	padding: 16px;
+	padding: var(--gap-md);
 	border-radius: 50%;
 
 	transition: all 0.2s ease;

@@ -1,9 +1,9 @@
 .aboutMe {
 	margin-inline: auto;
-	margin: 0 0 160px 0;
+	margin: 0 0 10rem 0;
 }
 .aboutTitle {
-	margin: 0 0 100px 0;
+	margin: 0 0 6.25rem 0;
 	text-align: center;
 }
 .wrapper {
@@ -11,7 +11,7 @@
 	grid-template-columns: 30% 1fr auto;
 
 	place-items: center;
-	gap: 20px;
+	gap: 1.25rem;
 }
 .imgBox {
 	border-right: 5px dashed var(--red-accent);
@@ -22,7 +22,7 @@
 
 .img {
 	filter: brightness(90%) saturate(0%);
-	padding: 10px;
+	padding: 0.625rem;
 
 	transition: filter 0.2s ease-in-out;
 }
@@ -42,10 +42,6 @@
 	width: 100%;
 }
 
-.aboutTextItem:last-child {
-	margin: 0 0 60px 0;
-}
-
 .accent {
 	font-family: var(--ff-heading);
 	color: var(--accent-clr);
@@ -57,25 +53,25 @@
 .skills {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: var(--gap-lg);
 }
 
 .skillsTitle {
 	font-family: var(--ff-heading);
-	font-size: var(--fs-md);
+	font-size: var(--fs-main);
 	color: var(--accent-clr);
 }
 
 .skillsWrapper {
 	display: flex;
-	gap: 8px;
+	gap: var(--gap-sm);
 }
 
 .skillsItem {
 	font-size: var(--fs-sm);
-	line-height: 19px;
+	line-height: 1.1875rem;
 	color: var(--text-clr-main);
 	background-color: var(--red-accent);
-	padding: 8px 12px;
+	padding: var(--gap-sm) var(--gap-md);
 	border-radius: 4px;
 }

@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 24px 0;
+	padding: var(--gap-xl) 0;
 }
 .menuWrapper {
 	display: flex;
@@ -12,8 +12,8 @@
 .btnMain {
 	border: 1px solid var(--accent-clr);
 	background-color: transparent;
-	padding: 15px 46px;
-	border-radius: 6px;
+	padding: var(--gap-lg) var(--gap-xxxl);
+	border-radius: 0.6rem;
 	font-family: var(--ff-heading);
 	color: var(--accent-clr);
 	cursor: pointer;

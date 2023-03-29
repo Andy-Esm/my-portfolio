@@ -22,11 +22,7 @@ const Header = () => {
 
 			<div className={style.menuWrapper}>
 				<Menu />
-				<a
-					className={style.btnMain}
-					href="../../../public/resume.pdf"
-					target="_blank"
-				>
+				<a className={style.btnMain} href="./resume.pdf" target="_blank">
 					Резюме
 				</a>
 			</div>

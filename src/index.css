@@ -17,10 +17,20 @@
 	--red-accent: #df506e;
 
 	/*Font sizes*/
-	--fs-lg: 32px;
-	--fs-main: 18px;
-	--fs-md: 21px;
-	--fs-sm: 16px;
+	--fs-lg: 2rem; /*32px*/
+	--fs-md: 1.5rem; /*24px*/
+	--fs-main: 1.125rem; /*18px*/
+	--fs-sm: 1rem; /*16px*/
+
+	/*gap*/
+	--gap-sm: 0.5rem; /*8px*/
+	--gap-md: 1rem; /*16px*/
+	--gap-lg: 1.25rem; /*20px*/
+	--gap-xl: 1.5rem; /*24px*/
+	--gap-xxl: 2rem; /*32px*/
+	--gap-xxxl: 3rem; /*48px*/
+	--gap-100: 6.25rem; /*100px*/
+	--gap-160: 10rem; /*160px*/
 }
 
 * {
@@ -28,6 +38,15 @@
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
+}
+
+html {
+	font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+	html {
+		font-size: 14px;
+	}
 }
 
 body {
@@ -40,7 +59,7 @@ body {
 
 .container {
 	width: 100%;
-	max-width: 1440px;
+	max-width: 90rem;
 	padding: 0 1rem;
 	margin-inline: auto;
 }

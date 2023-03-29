@@ -1,8 +1,8 @@
 .btnMain {
 	border: 1px solid var(--accent-clr);
 	background-color: transparent;
-	padding: 15px 46px;
-	border-radius: 6px;
+	padding: 1.5rem 4.6rem;
+	border-radius: 0.6rem;
 	font-family: var(--ff-heading);
 	color: var(--accent-clr);
 	cursor: pointer;
