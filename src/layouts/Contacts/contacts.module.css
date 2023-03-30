@@ -43,6 +43,11 @@
 	background: var(--bg-clr-main);
 }
 
+.motionDiv {
+	width: 100%;
+	max-width: 34.6875rem;
+}
+
 .form {
 	width: 100%;
 	max-width: 34.6875rem;

@@ -1,3 +1,4 @@
+import {motion} from 'framer-motion';
 import React from 'react';
 import icons from '../../assets/icons.svg';
 import {BgHeroCanvas, CircleDecoration, SpanText} from '../../components';
@@ -11,7 +12,16 @@ const Hero = () => {
 			<CircleDecoration className={style.decorRed} />
 			<div className={style.wrapper}>
 				<BgHeroCanvas />
-				<div className={style.titleBlock}>
+				<motion.div
+					className={style.titleBlock}
+					initial={{opacity: 0, y: -20}}
+					animate={{opacity: 1, y: 0}}
+					transition={{
+						delay: 0.3,
+						duration: 0.5,
+						ease: 'easeInOut',
+					}}
+				>
 					<h1 className={style.title}>
 						Привет
 						<SpanText className={style.accentRed}>.</SpanText>
@@ -53,7 +63,7 @@ const Hero = () => {
 							</svg>
 						</a>
 					</div>
-				</div>
+				</motion.div>
 			</div>
 			<CircleDecoration className={style.decorBlue} />
 		</section>
