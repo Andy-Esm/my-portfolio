@@ -34,7 +34,7 @@
 .wrapper {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	min-height: 43.75;
+	min-height: 43.75rem;
 }
 
 .titleBlock {
