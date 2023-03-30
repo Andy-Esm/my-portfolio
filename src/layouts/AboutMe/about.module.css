@@ -75,3 +75,28 @@
 	padding: var(--gap-sm) var(--gap-md);
 	border-radius: 4px;
 }
+
+@media screen and (max-width: 826px) {
+	.wrapper {
+		grid-template-columns: 1fr;
+	}
+	.imgBox {
+		border-right: none;
+		border-top: none;
+		border-bottom: 5px dashed var(--red-accent);
+		border-right: 5px dashed var(--red-accent);
+	}
+	.aboutText {
+		align-self: center;
+		text-align: center;
+	}
+	.aboutTextItem {
+		width: 100%;
+	}
+	.skills {
+		align-self: center;
+	}
+	.skillsItem {
+		font-size: var(--fs-xs);
+	}
+}

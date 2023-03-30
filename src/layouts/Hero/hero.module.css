@@ -81,3 +81,29 @@ span {
 	transform: scale(1.1);
 	border: 2px dashed var(--accent-clr);
 }
+
+@media screen and (max-width: 826px) {
+	.wrapper {
+		grid-template-columns: 1fr;
+	}
+	.titleBlock {
+		padding: 0;
+		grid-column: 1 / 2;
+		text-align: center;
+	}
+	.title {
+		font-size: 4rem;
+		line-height: 5.25rem;
+	}
+	.decorRed {
+		top: 0;
+		right: 0;
+	}
+	.decorBlue {
+		top: 0;
+		left: 0;
+	}
+	.social {
+		justify-content: center;
+	}
+}
