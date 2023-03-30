@@ -10,6 +10,12 @@
 	transition: all 0.3s ease-in-out;
 }
 
+@media (max-width: 826px) {
+	.btnMain {
+		padding: 1rem 2.6rem;
+	}
+}
+
 .btnMain:hover {
 	background-color: var(--accent-clr);
 	color: #222;

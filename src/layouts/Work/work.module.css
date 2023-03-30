@@ -113,3 +113,29 @@
 	padding: 4px 8px;
 	border-radius: 4px;
 }
+
+@media screen and (max-width: 826px) {
+	.work {
+		padding: var(--gap-md) 0;
+	}
+	.workWrapper {
+		flex-direction: column;
+		flex-grow: 1;
+	}
+	.workItem {
+		display: flex;
+		flex-direction: column;
+	}
+	.workImgBox {
+		border-left: none;
+		border-bottom: none;
+		border-top: 5px dashed var(--accent-clr);
+	}
+	.workText {
+		display: grid;
+		max-width: inherit;
+	}
+	.workImage {
+		width: 100%;
+	}
+}

@@ -21,6 +21,12 @@
 	transition: all 0.3s ease-in-out;
 }
 
+@media screen and (max-width: 826px) {
+	.btnMain {
+		padding: var(--gap-md) var(--gap-xl);
+	}
+}
+
 .btnMain:hover {
 	background-color: var(--accent-clr);
 	color: #222;
