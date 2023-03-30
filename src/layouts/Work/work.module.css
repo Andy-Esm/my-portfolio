@@ -1,6 +1,6 @@
 .work {
-	padding: var(--gap-lg) 0;
-	margin: 0 0 var(--gap-160) 0;
+	padding: var(--gap-xl) 0;
+	margin: 0 0 200px 0;
 }
 .workTitle {
 	text-align: left;

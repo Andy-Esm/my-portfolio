@@ -1,27 +1,43 @@
+import {motion} from 'framer-motion';
 import React from 'react';
-import style from './another-projects.module.css';
-import {projects} from '../../constants';
-import portfolio from '../../assets/portfolio-bg.jpg';
 import icons from '../../assets/icons.svg';
+import portfolio from '../../assets/portfolio-bg.jpg';
+import {projects} from '../../constants';
+import {slideLeft, slideLeftHover, textVariant} from '../../utils/motion';
+import style from './another-projects.module.css';
 
 const AnotherProjects = () => {
 	return (
-		<section className={style.projects}>
-			<h2 className={`${style.projectsTitle} title`}>
+		<motion.section
+			className={style.projects}
+			initial="hidden"
+			whileInView="visible"
+			viewport={{amount: 0.4, once: true}}
+			id="projects"
+		>
+			<motion.h2 className={`${style.projectsTitle} title`} variants={slideLeft}>
 				Другие проекты<span className={style.redAccent}>.</span>
-			</h2>
+			</motion.h2>
 			<div className={style.wrapper}>
-				<div className={style.projectsList}>
+				<ul className={style.projectsList}>
 					{projects.map((project) => (
-						<div className={style.projectItem} key={project.id}>
-							<div className={style.projectTextBox}>
+						<motion.li
+							className={style.projectItem}
+							key={project.id}
+							variants={textVariant(0.4)}
+							custom={project.id - 0.5}
+							whileHover="visible"
+						>
+							<motion.div className={style.projectTextBox} variants={slideLeftHover}>
 								<h4 className={style.projectTitle}>{project.title}</h4>
 								<p className={style.projectDescription}>{project.description}</p>
 								<div className={style.projectTech}>
-									{project.tech.map((el) => {
+									{project.tech.map((el, idx) => {
 										return (
 											<>
-												<span className={style.skills}>{el}</span>
+												<span className={style.skills} key={idx}>
+													{el}
+												</span>
 											</>
 										);
 									})}
@@ -48,13 +64,13 @@ const AnotherProjects = () => {
 										</svg>
 									</a>
 								</div>
-							</div>
+							</motion.div>
 							<img src={portfolio} alt="" className={style.projectImg} />
-						</div>
+						</motion.li>
 					))}
-				</div>
+				</ul>
 			</div>
-		</section>
+		</motion.section>
 	);
 };
 

@@ -1,10 +1,11 @@
 import emailjs from '@emailjs/browser';
 import {motion} from 'framer-motion';
 import React, {useRef, useState} from 'react';
-import {InView} from 'react-intersection-observer';
+
 import icons from '../../assets/icons.svg';
 import {CircleDecoration} from '../../components';
 import ButtonMain from '../../components/ButtonMain/ButtonMain';
+import {slideUp} from '../../utils/motion';
 import style from './contacts.module.css';
 
 const Contacts = () => {
@@ -56,15 +57,14 @@ const Contacts = () => {
 			);
 	};
 
-	const animation = {
-		opacity: 0,
-		y: 50,
-		transition: {duration: 2, ease: 'easeInOut', delay: 1},
-	};
-
 	return (
-		<section className={style.contacts}>
-			<div className={style.formWrapper}>
+		<motion.section
+			className={style.contacts}
+			initial="hidden"
+			whileInView="visible"
+			id="contacts"
+		>
+			<motion.div className={style.formWrapper}>
 				<h3 className={`${style.contactsTitle} title`}>
 					Контакты<span className={style.accent}>.</span>
 				</h3>
@@ -74,73 +74,75 @@ const Contacts = () => {
 				</p>
 				<CircleDecoration className={style.decorBlue} />
 				<CircleDecoration className={style.decorRed} />
-				<InView>
-					{({inView, ref}) => (
-						<motion.div
-							className={style.motionDiv}
-							ref={ref}
-							animate={inView ? {opacity: 1, y: 0} : animation}
-						>
-							<form ref={formRef} onSubmit={handleSubmit} className={style.form}>
-								<label htmlFor="">
-									<input
-										className={style.input}
-										type="text"
-										name="name"
-										value={form.name}
-										onChange={handleChange}
-										placeholder="Как вас зовут?"
-									/>
-								</label>
-								<label htmlFor="">
-									<input
-										className={style.input}
-										type="email"
-										name="email"
-										value={form.email}
-										onChange={handleChange}
-										placeholder="Введите ваш email"
-									/>
-								</label>
-								<label htmlFor="">
-									<textarea
-										className={style.textarea}
-										name="message"
-										value={form.message}
-										onChange={handleChange}
-										placeholder="Напишите что-нибудь..."
-										rows="5"
-									></textarea>
-								</label>
-								<div className={style.socialWrapper}>
-									<div className={style.socialLinks}>
-										<a href="https://github.com/Andy-Esm" target="_blank">
-											<svg className={style.socialIcon}>
-												<use href={icons + '#github'} />
-											</svg>
-										</a>
-										<a href="https://vk.com/andyesm" target="_blank">
-											<svg className={style.socialIcon}>
-												<use href={icons + '#vk'} />
-											</svg>
-										</a>
-										<a href="https://leetcode.com/Andy-Esm/" target="_blank">
-											<svg className={style.socialIcon}>
-												<use href={icons + '#leetcode'} />
-											</svg>
-										</a>
-									</div>
-									<ButtonMain
-										title={loading ? 'Отправка...' : 'Отправить'}
-										type={'submit'}
-									/>
-								</div>
-							</form>
-						</motion.div>
-					)}
-				</InView>
-			</div>
-		</section>
+
+				<motion.form
+					ref={formRef}
+					onSubmit={handleSubmit}
+					className={style.form}
+					variants={slideUp}
+				>
+					<label htmlFor="">
+						<motion.input
+							className={style.input}
+							type="text"
+							name="name"
+							value={form.name}
+							onChange={handleChange}
+							placeholder="Как вас зовут?"
+							variants={slideUp}
+							custom={1.2}
+						/>
+					</label>
+					<label htmlFor="">
+						<motion.input
+							className={style.input}
+							type="email"
+							name="email"
+							value={form.email}
+							onChange={handleChange}
+							placeholder="Введите ваш email"
+							variants={slideUp}
+							custom={1.4}
+						/>
+					</label>
+					<label htmlFor="">
+						<motion.textarea
+							className={style.textarea}
+							name="message"
+							value={form.message}
+							onChange={handleChange}
+							placeholder="Напишите что-нибудь..."
+							rows="5"
+							variants={slideUp}
+							custom={1.6}
+						></motion.textarea>
+					</label>
+					<div className={style.socialWrapper}>
+						<div className={style.socialLinks}>
+							<a href="https://github.com/Andy-Esm" target="_blank">
+								<svg className={style.socialIcon}>
+									<use href={icons + '#github'} />
+								</svg>
+							</a>
+							<a href="https://vk.com/andyesm" target="_blank">
+								<svg className={style.socialIcon}>
+									<use href={icons + '#vk'} />
+								</svg>
+							</a>
+							<a href="https://leetcode.com/Andy-Esm/" target="_blank">
+								<svg className={style.socialIcon}>
+									<use href={icons + '#leetcode'} />
+								</svg>
+							</a>
+						</div>
+						<ButtonMain
+							title={loading ? 'Отправка...' : 'Отправить'}
+							type={'submit'}
+						/>
+					</div>
+				</motion.form>
+			</motion.div>
+		</motion.section>
 	);
 };
 
