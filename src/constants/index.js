@@ -96,6 +96,7 @@ const skills = [
 	'Sass',
 	'Java Script',
 	'React',
+	'Framer-motion',
 	'Gulp',
 	'Vite',
 	'Scrum',
