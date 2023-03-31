@@ -9,22 +9,26 @@ const Header = () => {
 
 	return (
 		<header className={style.header}>
-			<Link
-				to="/"
-				className={style.navLink}
-				onClick={() => {
-					setActive('');
-					window.scrollTo(0, 0);
-				}}
-			>
-				<img src={logo} alt="Andrey Esman logo" />
-			</Link>
+			<div className="container">
+				<div className={style.headerWrapper}>
+					<Link
+						to="/"
+						className={style.navLink}
+						onClick={() => {
+							setActive('');
+							window.scrollTo(0, 0);
+						}}
+					>
+						<img src={logo} alt="Andrey Esman logo" />
+					</Link>
 
-			<div className={style.menuWrapper}>
-				<Menu />
-				<a className={style.btnMain} href="./resume.pdf" target="_blank">
-					Резюме
-				</a>
+					<div className={style.menuWrapper}>
+						<Menu />
+						<a className={style.btnMain} href="./resume.pdf" target="_blank">
+							Резюме
+						</a>
+					</div>
+				</div>
 			</div>
 		</header>
 	);

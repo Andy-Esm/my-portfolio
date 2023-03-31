@@ -1,5 +1,6 @@
 .projects {
-	margin: 0 0 160px 0;
+	padding: 0 0 60px 0;
+	margin: 0 0 60px 0;
 }
 .projectsTitle {
 	text-align: right;
@@ -24,7 +25,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 12px;
-	background-color: var(--text-clr-main);
+	background-color: #1e1e1e;
 	box-shadow: 7px 7px 4px rgba(0, 0, 0, 0.25);
 	overflow: hidden;
 	min-height: 400px;
@@ -95,8 +96,17 @@
 	border-radius: 4px;
 }
 
-@media (max-width: 380px) {
+@media screen and (max-width: 1024px) {
+	.projectsList {
+		grid-template-columns: repeat(2, 360px);
+	}
+}
+
+@media (max-width: 769px) {
 	.projectsList {
 		grid-template-columns: 1fr;
+	}
+	.projectsTitle {
+		text-align: center;
 	}
 }

@@ -1,5 +1,7 @@
 .app {
-	background-image: url('../src/assets/herobg.png');
-	background-position: top;
-	background-repeat: no-repeat;
+	/* background-image: url('../src/assets/pngwing.com.png');
+	background-position: bottom;
+	background-size: contain;
+	background-repeat: no-repeat; */
+	background-color: #2b2b2b;
 }

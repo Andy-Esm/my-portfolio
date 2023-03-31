@@ -1,6 +1,6 @@
 .aboutMe {
-	margin-inline: auto;
 	margin: 0 0 10rem 0;
+	padding: 0 0 10rem 0;
 }
 .aboutTitle {
 	margin: 0 0 6.25rem 0;
@@ -76,7 +76,34 @@
 	border-radius: 4px;
 }
 
-@media (max-width: 380px) {
+@media screen and (max-width: 1024px) {
+	.wrapper {
+		flex-direction: column;
+		align-items: center;
+	}
+	.imgBox {
+		border-right: none;
+		border-top: none;
+		border-bottom: 3px dashed var(--red-accent);
+		border-left: 3px dashed var(--red-accent);
+		margin: 0 0 var(--gap-lg) 0;
+	}
+	.aboutText {
+		border: none;
+	}
+	.skillsWrapper {
+		flex-wrap: wrap;
+	}
+	.skills {
+		margin: var(--gap-lg) 0 0 0;
+	}
+}
+
+@media screen and (max-width: 769px) {
+	.aboutMe {
+		padding: 0;
+		margin: 0 0 var(--gap-xxxl) 0;
+	}
 	.wrapper {
 		flex-direction: column;
 		align-items: center;

@@ -29,7 +29,7 @@
 	height: 3.125rem;
 	border: 5px dashed var(--accent-clr);
 	border-radius: 50%;
-	background: var(--bg-clr-main);
+	background: #2b2b2b;
 }
 
 .decorRed {
@@ -40,7 +40,7 @@
 	height: 3.125rem;
 	border: 5px dashed var(--red-accent);
 	border-radius: 50%;
-	background: var(--bg-clr-main);
+	background: #2b2b2b;
 }
 
 .motionDiv {
@@ -58,7 +58,7 @@
 
 .input,
 .textarea {
-	background: #2b2b2b;
+	background: #1e1e1e;
 	border-radius: 6px;
 	padding: var(--gap-sm) var(--gap-md);
 	width: 100%;
@@ -86,4 +86,11 @@
 .socialIcon:hover {
 	fill: var(--accent-clr);
 	transform: scale(1.1);
+}
+
+@media screen and (max-width: 769px) {
+	.decorBlue,
+	.decorRed {
+		display: none;
+	}
 }
