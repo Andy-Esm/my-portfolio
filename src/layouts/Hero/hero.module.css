@@ -82,7 +82,7 @@ span {
 	border: 2px dashed var(--accent-clr);
 }
 
-@media screen and (max-width: 826px) {
+@media (max-width: 826px) {
 	.wrapper {
 		grid-template-columns: 1fr;
 	}

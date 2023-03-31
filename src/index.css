@@ -21,6 +21,7 @@
 	--fs-md: 1.5rem; /*24px*/
 	--fs-main: 1.125rem; /*18px*/
 	--fs-sm: 1rem; /*16px*/
+	--fs-xs: 0.875rem; /*14px*/
 
 	/*gap*/
 	--gap-sm: 0.5rem; /*8px*/
@@ -43,11 +44,6 @@
 html {
 	font-size: 16px;
 }
-@media screen and (max-width: 768px) {
-	html {
-		font-size: 14px;
-	}
-}
 
 body {
 	min-height: 100vh;
@@ -55,12 +51,13 @@ body {
 	font-size: var(--ff-main);
 	background-color: var(--bg-clr-main);
 	color: var(--text-clr-main);
+	overflow-x: hidden;
 }
 
 .container {
 	width: 100%;
 	max-width: 90rem;
-	padding: 0 1rem;
+	padding: 0 var(--gap-md);
 	margin-inline: auto;
 }
 .title {
@@ -68,4 +65,19 @@ body {
 	color: var(--accent-clr);
 	font-size: var(--fs-lg);
 	text-transform: capitalize;
+}
+@media (max-width: 768px) {
+	html {
+		font-size: 14px;
+	}
+	.container {
+		max-width: 57.5rem;
+	}
+}
+
+@media (max-width: 420px) {
+	.container {
+		max-width: 25rem;
+		padding: 0 var(--gap-sm);
+	}
 }
