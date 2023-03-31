@@ -118,6 +118,9 @@
 	.work {
 		padding: var(--gap-md) 0;
 	}
+	.workTitle {
+		text-align: center;
+	}
 	.workWrapper {
 		flex-direction: column;
 		flex-grow: 1;

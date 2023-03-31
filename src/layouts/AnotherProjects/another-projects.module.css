@@ -10,6 +10,7 @@
 }
 
 .projectsList {
+	margin: 0 0 100px 0;
 	display: grid;
 	grid-template-columns: repeat(3, 360px);
 	grid-template-rows: repeat(2, auto);
@@ -18,7 +19,6 @@
 }
 
 .projectItem {
-	margin: 0 0 100px 0;
 	padding: 5px;
 	position: relative;
 	display: flex;
@@ -93,4 +93,10 @@
 	background-color: var(--red-accent);
 	padding: 4px 8px;
 	border-radius: 4px;
+}
+
+@media (max-width: 380px) {
+	.projectsList {
+		grid-template-columns: 1fr;
+	}
 }
