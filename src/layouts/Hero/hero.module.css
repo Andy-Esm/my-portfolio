@@ -1,5 +1,4 @@
 .hero {
-	position: relative;
 	padding: var(--gap-100) 0;
 	margin: 0 0 var(--gap-100) 0;
 }
@@ -8,6 +7,12 @@
 	width: 2.125rem;
 	height: 2rem;
 	fill: var(--text-clr-main);
+}
+.wrapper {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	min-height: 43.75rem;
 }
 
 .decorRed {
@@ -29,12 +34,6 @@
 	border: 5px dashed var(--accent-clr);
 	border-radius: 50%;
 	background: transparent;
-}
-
-.wrapper {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	min-height: 43.75rem;
 }
 
 .titleBlock {
@@ -82,7 +81,7 @@ span {
 	border: 2px dashed var(--accent-clr);
 }
 
-@media (max-width: 826px) {
+@media (max-width: 1334px) {
 	.wrapper {
 		grid-template-columns: 1fr;
 	}
@@ -108,13 +107,15 @@ span {
 	}
 }
 
-@media (max-width: 380px) {
+@media (max-width: 420px) {
 	.hero {
 		margin: 0 0 var(--gap-xxl) 0;
+		padding: 0;
+		min-height: 60%;
 	}
 	.title {
-		font-size: 2rem;
-		line-height: 3.25rem;
+		font-size: 3rem;
+		line-height: 4.25rem;
 	}
 	.decorBlue,
 	.decorRed {

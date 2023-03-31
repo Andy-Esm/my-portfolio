@@ -15,15 +15,13 @@ const App = () => {
 	return (
 		<BrowserRouter>
 			<div className="app">
-				<div className="container">
-					<Header />
-					<Hero />
-					<AboutMe />
-					<Work />
-					<AnotherProjects />
-					<div>
-						<Contacts />
-					</div>
+				<Header />
+				<Hero />
+				<AboutMe />
+				<Work />
+				<AnotherProjects />
+				<div>
+					<Contacts />
 				</div>
 				<Footer />
 			</div>

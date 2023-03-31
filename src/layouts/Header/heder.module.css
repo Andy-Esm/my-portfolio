@@ -1,8 +1,10 @@
 .header {
+	padding: var(--gap-xl) 0;
+}
+.headerWrapper {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: var(--gap-xl) 0;
 }
 .menuWrapper {
 	display: flex;
@@ -32,7 +34,7 @@
 	}
 }
 
-@media (max-width: 380px) {
+@media (max-width: 420px) {
 	.btnMain {
 		padding: var(--gap-sm) var(--gap-lg);
 		font-size: var(--fs-sm);
