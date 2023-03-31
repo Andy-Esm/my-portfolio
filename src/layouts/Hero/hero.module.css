@@ -107,3 +107,23 @@ span {
 		justify-content: center;
 	}
 }
+
+@media (max-width: 380px) {
+	.hero {
+		margin: 0 0 var(--gap-xxl) 0;
+	}
+	.title {
+		font-size: 2rem;
+		line-height: 3.25rem;
+	}
+	.decorBlue,
+	.decorRed {
+		width: 2rem;
+		height: 2rem;
+	}
+
+	.heroIcon {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+}
