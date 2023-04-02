@@ -1,6 +1,6 @@
 .aboutMe {
-	margin: 0 0 10rem 0;
-	padding: 0 0 10rem 0;
+	margin: 0 0 var(--gap-160) 0;
+	padding: var(--gap-60) 0;
 }
 .aboutTitle {
 	margin: 0 0 6.25rem 0;
@@ -8,15 +8,15 @@
 }
 .wrapper {
 	display: flex;
-	flex-direction: row;
-	align-items: flex-end;
-	gap: var(--gap-lg);
+	margin-inline: auto;
+	align-items: center;
+	justify-content: center;
+	gap: var(--gap-md);
 }
 .imgBox {
 	border-right: 5px dashed var(--red-accent);
 	border-top: 5px dashed var(--red-accent);
 	order: -1;
-	margin: 0 var(--gap-lg) 0 0;
 }
 
 .img {
@@ -31,10 +31,19 @@
 }
 
 .aboutText {
+	display: flex;
+	padding: var(--gap-md);
+	flex-direction: column;
+	gap: var(--gap-md);
 	align-self: start;
 	flex: 1;
-
-	margin-bottom: 20px;
+	width: 100%;
+	max-width: 60rem;
+	height: 100%;
+	min-height: 486px;
+	background-color: var(--bg-clr-secondary);
+	box-shadow: var(--box-shadow);
+	border-radius: 4px;
 }
 
 .aboutTextItem {
@@ -101,7 +110,6 @@
 
 @media screen and (max-width: 769px) {
 	.aboutMe {
-		padding: 0;
 		margin: 0 0 var(--gap-xxxl) 0;
 	}
 	.wrapper {
@@ -118,10 +126,11 @@
 	.aboutText {
 		border: none;
 	}
+	.skillsTitle {
+		text-align: center;
+	}
 	.skillsWrapper {
 		flex-wrap: wrap;
-	}
-	.skills {
-		margin: var(--gap-lg) 0 0 0;
+		justify-content: center;
 	}
 }

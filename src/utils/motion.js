@@ -7,9 +7,9 @@ const slideUp = {
 		y: 0,
 		opacity: 1,
 		transition: {
-			duration: 0.5,
-			ease: [0.43, 0.13, 0.23, 0.96],
-			delay: 0.3 * custom,
+			type: 'spring',
+			bounce: 0.2,
+			duration: 0.5 * custom,
 		},
 	}),
 };
@@ -37,7 +37,7 @@ const slideRight = {
 		opacity: 1,
 		transition: {
 			duration: 0.5,
-			ease: [0.43, 0.13, 0.23, 0.96],
+			type: 'spring',
 			delay: 0.3 * custom,
 		},
 	}),
@@ -49,6 +49,7 @@ const slideLeft = {
 		opacity: 1,
 		transition: {
 			duration: 0.5,
+			bounce: 0.5,
 			ease: [0.43, 0.13, 0.23, 0.96],
 			delay: 0.3 * custom,
 		},

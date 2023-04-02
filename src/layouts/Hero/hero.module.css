@@ -1,6 +1,6 @@
 .hero {
-	padding: var(--gap-100) 0;
-	margin: 0 0 var(--gap-100) 0;
+	padding: var(--gap-60) 0;
+	margin: 0 0 var(--gap-160) 0;
 }
 
 .heroIcon {
@@ -17,7 +17,7 @@
 
 .decorRed {
 	position: absolute;
-	top: 5rem;
+	top: 0;
 	right: 0;
 	width: 3.125rem;
 	height: 3.125rem;

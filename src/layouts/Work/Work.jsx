@@ -12,7 +12,7 @@ const Work = () => {
 			className={style.work}
 			initial="hidden"
 			whileInView="visible"
-			viewport={{amount: 0.4, once: true}}
+			viewport={{amount: 0.8, once: true}}
 			id="work"
 		>
 			<div className="container">
