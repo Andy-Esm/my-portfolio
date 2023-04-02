@@ -2,7 +2,7 @@ import {motion} from 'framer-motion';
 import React from 'react';
 import myself from '../../assets/myself.jpg';
 import {skills} from '../../constants';
-import {slideDown, slideRight, textVariant} from '../../utils/motion';
+import {slideDown, slideLeft, slideRight, textVariant} from '../../utils/motion';
 import style from './about.module.css';
 const AboutMe = () => {
 	return (
@@ -15,7 +15,7 @@ const AboutMe = () => {
 		>
 			<div className="container">
 				<motion.h2 className={`${style.aboutTitle} title`} variants={slideDown}>
-					Немного обо мне<span className={style.titleAccent}>.</span>
+					Немного о себе<span className={style.titleAccent}>.</span>
 				</motion.h2>
 				<div className={style.wrapper}>
 					<motion.div className={style.imgBox} variants={textVariant(0.4)}>
@@ -27,10 +27,10 @@ const AboutMe = () => {
 							custom={1.3}
 						/>
 					</motion.div>
-					<div className={style.aboutText}>
+					<motion.div className={style.aboutText} variants={slideLeft}>
 						<motion.p
 							className={style.aboutTextItem}
-							variants={textVariant(0.2)}
+							variants={textVariant(0.4)}
 							custom={1}
 						>
 							Меня зовут <span className={style.accent}>Андрей</span> и я занимаюсь
@@ -38,50 +38,45 @@ const AboutMe = () => {
 						</motion.p>
 						<motion.p
 							className={style.aboutTextItem}
-							variants={textVariant(0.2)}
+							variants={textVariant(0.4)}
 							custom={1.2}
 						>
-							Свои навыки я использую для создания интуитивно понятных, красивых
-							интерфейсов. Я люблю работать в команде и придерживаюсь методологии
-							Scrum для эффективной разработки проектов.
+							Свои навыки я&nbsp;использую для создания интуитивно понятных, красивых
+							интерфейсов. Я&nbsp;люблю работать в&nbsp;команде и&nbsp;придерживаюсь
+							методологии Scrum для эффективной разработки проектов.
 						</motion.p>
 						<motion.p
 							className={style.aboutTextItem}
-							variants={textVariant(0.2)}
+							variants={textVariant(0.4)}
 							custom={1.4}
 						>
-							Моей любимой частью работы является создание анимаций и визуальной
-							части сайта, которые помогают моим проектам выделяться на фоне других.
-							Я убежден, что даже самые простые детали могут повысить удобство
-							использования продукта, поэтому стараюсь улучшать пользовательский опыт
-							во всех аспектах.
+							Моей любимой частью работы является создание анимаций и&nbsp;визуальной
+							части сайта, которые помогают моим проектам выделяться на&nbsp;фоне
+							других. Я&nbsp;убежден, что даже самые простые детали могут повысить
+							удобство использования продукта, поэтому стараюсь улучшать
+							пользовательский опыт во&nbsp;всех аспектах.
 						</motion.p>
 						<motion.p
 							className={style.aboutTextItem}
-							variants={textVariant(0.2)}
+							variants={textVariant(0.4)}
 							custom={1.6}
 						>
-							Я всегда готов к решению новых задач и не боюсь испытывать новые
-							подходы. Если вы ищете React разработчика или верстальщика, который
-							готов принять участие в увлекательных проектах, свяжитесь со мной, и я
-							буду рад обсудить возможное сотрудничество!
+							Я&nbsp;всегда готов к&nbsp;решению новых задач и&nbsp;не&nbsp;боюсь
+							испытывать новые подходы. Если вы&nbsp;ищете React разработчика или
+							верстальщика, который готов принять участие в&nbsp;увлекательных
+							проектах, свяжитесь со&nbsp;мной, и&nbsp;я буду рад обсудить возможное
+							сотрудничество!
 						</motion.p>
-						<motion.p
-							className={style.aboutTextItem}
-							variants={textVariant(0.2)}
-							custom={1.8}
-						>
-							Возможно у меня не так много опыта как хотелось бы, но с каждой
-							строчкой кода, с каждой css анимацией, с каждым небольшим проектом —
-							я с огромным удовольствием погружаюсь в мир  информационных технологий.
-						</motion.p>
+
 						<motion.div
 							className={style.skills}
 							initial="hidden"
-							viewport={{amount: 0.4, once: true}}
+							viewport={{amount: 0.6, once: true}}
 							whileInView="visible"
 						>
-							<h3 className={style.skillsTitle}>Некоторые навыки</h3>
+							<motion.h3 className={style.skillsTitle} variants={textVariant(0.5)}>
+								Некоторые навыки
+							</motion.h3>
 							<motion.div
 								className={style.skillsWrapper}
 								variants={textVariant(0.4)}
@@ -96,7 +91,7 @@ const AboutMe = () => {
 								})}
 							</motion.div>
 						</motion.div>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</motion.section>
