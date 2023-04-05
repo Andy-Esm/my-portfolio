@@ -1,29 +1,45 @@
 import {motion} from 'framer-motion';
-import React from 'react';
+import React, {useState} from 'react';
 import icons from '../../assets/icons.svg';
-import {CircleDecoration, SpanText} from '../../components';
-
+import {CircleDecoration, Cursor, SpanText} from '../../components';
+import {slideLeft, slideUp, textVariant} from '../../utils/motion';
 import style from './hero.module.css';
+
 const Hero = () => {
 	const name = 'Андрей'.split('');
+	const [isHover, setIsHover] = useState('default');
+
+	const textEnter = () => {
+		setIsHover('hover');
+	};
+	const textLeave = () => {
+		setIsHover('default');
+	};
 
 	return (
-		<section className={`${style.hero}  `}>
+		<motion.section
+			className={`${style.hero}  `}
+			initial="hidden"
+			viewport={{amount: 0.4, once: true}}
+			whileInView="visible"
+		>
+			<Cursor cursorEvent={isHover} />
 			<div className="container">
 				<div className={style.wrapper}>
 					<CircleDecoration className={style.decorRed} />
-
 					<motion.div
-						className={style.titleBlock}
-						initial={{opacity: 0, y: -20}}
-						animate={{opacity: 1, y: 0}}
-						transition={{
-							delay: 0.3,
-							duration: 0.5,
-							ease: 'easeInOut',
-						}}
+						className={style.textBlock}
+						variants={textVariant(0.3)}
+						onMouseEnter={textEnter}
+						onMouseLeave={textLeave}
 					>
-						<h1 className={style.title}>
+						<span className={style.subtitle}>Frontend</span>
+						<span className={style.subtitle}>Верстка</span>
+						<span className={style.subtitle}>React</span>
+						<span className={style.subtitle}>JavaScript</span>
+					</motion.div>
+					<div className={style.titleBlock}>
+						<motion.h1 className={style.title} variants={slideLeft}>
 							Привет
 							<SpanText className={style.accentRed}>.</SpanText>
 							<br />
@@ -34,8 +50,8 @@ const Hero = () => {
 									return <SpanText key={index}>{letter}</SpanText>;
 								})}
 							</div>
-						</h1>
-						<div className={style.social}>
+						</motion.h1>
+						<motion.div className={style.social} variants={slideUp}>
 							<a
 								href="https://github.com/Andy-Esm"
 								className={style.socialLink}
@@ -63,12 +79,12 @@ const Hero = () => {
 									<use href={icons + '#leetcode'} />
 								</svg>
 							</a>
-						</div>
-					</motion.div>
+						</motion.div>
+					</div>
 					<CircleDecoration className={style.decorBlue} />
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	);
 };
 

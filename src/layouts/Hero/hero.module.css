@@ -1,6 +1,8 @@
 .hero {
 	padding: var(--gap-60) 0;
 	margin: 0 0 var(--gap-160) 0;
+
+
 }
 
 .heroIcon {
@@ -35,6 +37,19 @@
 	border-radius: 50%;
 	background: transparent;
 }
+
+.textBlock{
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	font-size: 100px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: var(--bg-clr-secondary);
+
+}
+
+
 
 .titleBlock {
 	padding: 0 0 0 var(--gap-100);
@@ -81,18 +96,63 @@ span {
 	border: 2px dashed var(--accent-clr);
 }
 
+/* Media queries */
+
+
 @media (max-width: 1334px) {
 	.wrapper {
-		grid-template-columns: 1fr;
+		grid-template-columns: 1fr 1fr;
+		place-items: center;
+		gap: var(--gap-lg);
 	}
 	.titleBlock {
 		padding: 0;
-		grid-column: 1 / 2;
+
 		text-align: center;
+	}
+	.textBlock{
+		font-size: 4rem;
+
 	}
 	.title {
 		font-size: 4rem;
 		line-height: 5.25rem;
+		text-align: left;
+	}
+	.decorRed {
+		top: 0;
+		right: 0;
+	}
+	.decorBlue {
+		top: 0;
+		left: 0;
+	}
+	.wrapper {
+		grid-column: auto;
+
+	}
+}
+
+@media (max-width: 979px){
+.wrapper {
+		grid-template-columns: 1fr;
+		place-items: center;
+		gap: var(--gap-lg);
+	}
+	.titleBlock {
+		padding: 0;
+
+		text-align: center;
+	}
+	.textBlock{
+		font-size: 4rem;
+		text-align: center;
+
+	}
+	.title {
+		font-size: 4rem;
+		line-height: 5.25rem;
+		text-align: center;
 	}
 	.decorRed {
 		top: 0;
@@ -105,14 +165,24 @@ span {
 	.social {
 		justify-content: center;
 	}
+	.wrapper {
+		grid-column: auto;
+
+	}
 }
 
-@media (max-width: 420px) {
+@media (max-width: 767px) {
 	.hero {
 		margin: 0 0 var(--gap-xxl) 0;
 		padding: 0;
 		min-height: 60%;
 	}
+
+	.textBlock{
+		font-size: 3rem;
+		text-align: center;
+	}
+
 	.title {
 		font-size: 3rem;
 		line-height: 4.25rem;
@@ -127,4 +197,38 @@ span {
 		width: 1.5rem;
 		height: 1.5rem;
 	}
+	.wrapper {
+		 grid-column: auto;
+
+	}
+}
+
+@media (max-width: 420px) {
+	.hero {
+		margin: 0 0 var(--gap-xxl) 0;
+		padding: 0;
+		min-height: 60%;
+	}
+	.wrapper{
+		grid-template-columns: 1fr;
+	}
+	.textBlock{
+	 display: none;
+	}
+
+ 	.title {
+		font-size: 4rem;
+		line-height: 4.25rem;
+	}
+	.decorBlue,
+	.decorRed {
+		width: 2rem;
+		height: 2rem;
+	}
+
+	.heroIcon {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+
 }
