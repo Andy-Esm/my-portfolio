@@ -87,6 +87,15 @@
 	transform: scale(1.1);
 }
 
+@media screen and (max-width: 979px){
+	.decorBlue{
+		right: 5%;
+	}
+	.decorRed{
+		left: 5%;
+	}
+}
+
 @media screen and (max-width: 769px) {
 	.decorBlue,
 	.decorRed {
