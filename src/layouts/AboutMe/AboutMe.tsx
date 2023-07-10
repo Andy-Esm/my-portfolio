@@ -1,5 +1,4 @@
 import {motion} from 'framer-motion';
-import React from 'react';
 import myself from '../../assets/myself.jpg';
 import {skills} from '../../constants';
 import {slideDown, slideLeft, slideRight, textVariant} from '../../utils/motion';
@@ -82,7 +81,7 @@ const AboutMe = () => {
 								variants={textVariant(0.4)}
 								custom={1}
 							>
-								{skills.map((el) => {
+								{skills.map((el:string) => {
 									return (
 										<>
 											<span className={style.skillsItem}>{el}</span>
