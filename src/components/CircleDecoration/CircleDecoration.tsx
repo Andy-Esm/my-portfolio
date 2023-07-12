@@ -1,7 +1,10 @@
-import {motion, useAnimationControls} from 'framer-motion';
-import React from 'react';
+import { motion, useAnimationControls } from 'framer-motion';
 
-const CircleDecoration = ({className}) => {
+type CircleDecorationProps = {
+	className: string;
+};
+
+function CircleDecoration({ className }: CircleDecorationProps) {
 	const controls = useAnimationControls();
 	const circleAnimation = () => {
 		controls.start({
@@ -30,8 +33,8 @@ const CircleDecoration = ({className}) => {
 				circleAnimation();
 			}}
 			className={className}
-		></motion.div>
+		/>
 	);
-};
+}
 
 export default CircleDecoration;

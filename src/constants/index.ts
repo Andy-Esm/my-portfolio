@@ -96,4 +96,4 @@ const skills = [
 	'Scrum',
 ];
 
-export {experiences, projects, MENU_LINKS, skills};
+export { experiences, projects, MENU_LINKS, skills };

@@ -2,30 +2,35 @@ module.exports = {
 	env: {
 		browser: true,
 		es2021: true,
+		node: true,
+	},
+	settings: {
+		react: {
+			version: 'detect',
+		},
 	},
 	extends: [
-		'airbnb',
-		'airbnb-typescript',
-		'airbnb/hooks',
-		'plugin:@typescript-eslint/recommended',
+		'eslint:recommended',
 		'plugin:react/recommended',
+		'plugin:@typescript-eslint/recommended',
+		'plugin:prettier/recommended',
 	],
-	overrides: [
-		{
-			env: {
-				node: true,
-			},
-			files: ['.eslintrc.{js,cjs}'],
-			parserOptions: {
-				sourceType: 'script',
-			},
-		},
-	],
+	overrides: [],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
+		parser: '@typescript-eslint/parser',
+		project: './tsconfig.json',
 	},
-	plugins: ['@typescript-eslint', 'react'],
-	rules: {},
+	plugins: ['@typescript-eslint', 'react', 'prettier'],
+	rules: {
+		'prettier/prettier': 'error',
+		'react/react-in-jsx-scope': 'off',
+		'react/no-array-index-key': 'off',
+		'no-console': 'warn',
+		'no-irregular-whitespace': 'off',
+
+	},
+	ignorePatterns: ['vite.config.ts', 'dist'],
 };
