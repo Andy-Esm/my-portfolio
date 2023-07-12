@@ -1,4 +1,4 @@
-import {BrowserRouter} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import {
 	AboutMe,
@@ -10,10 +10,10 @@ import {
 	Work,
 } from './layouts';
 
-const App = () => {
+function App() {
 	return (
 		<BrowserRouter>
-			<div className="app">
+			<div className='app'>
 				<Header />
 				<Hero />
 				<AboutMe />
@@ -26,5 +26,5 @@ const App = () => {
 			</div>
 		</BrowserRouter>
 	);
-};
+}
 export default App;

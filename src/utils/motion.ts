@@ -31,7 +31,7 @@ const slideDown = {
 };
 
 const slideRight = {
-	hidden: {x: -100, opacity: 0},
+	hidden: { x: -100, opacity: 0 },
 	visible: (custom) => ({
 		x: 0,
 		opacity: 1,
@@ -43,7 +43,7 @@ const slideRight = {
 	}),
 };
 const slideLeft = {
-	hidden: {x: 100, opacity: 0},
+	hidden: { x: 100, opacity: 0 },
 	visible: (custom) => ({
 		x: 0,
 		opacity: 1,
@@ -57,7 +57,7 @@ const slideLeft = {
 };
 
 const slideLeftHover = {
-	hidden: {right: -100, opacity: 0},
+	hidden: { right: -100, opacity: 0 },
 	visible: (custom) => ({
 		right: 0,
 		opacity: 1,
@@ -96,8 +96,8 @@ const zoomIn = (delay, duration) => {
 			opacity: 1,
 			transition: {
 				type: 'tween',
-				delay: delay,
-				duration: duration,
+				delay,
+				duration,
 				ease: [0.43, 0.13, 0.23, 0.96],
 			},
 		},

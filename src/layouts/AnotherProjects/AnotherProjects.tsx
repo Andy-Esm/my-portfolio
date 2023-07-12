@@ -1,20 +1,20 @@
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import React from 'react';
+import { projects } from '../../constants';
+import { slideLeft, slideUp } from '../../utils/motion.ts';
 import icons from '../../assets/icons.svg';
-import {projects} from '../../constants';
-import {slideLeft, slideUp} from '../../utils/motion';
 import style from './another-projects.module.css';
 
-const AnotherProjects = () => {
+function AnotherProjects() {
 	return (
 		<motion.section
 			className={style.projects}
-			initial="hidden"
-			whileInView="visible"
-			viewport={{amount: 0.4, once: true}}
-			id="projects"
+			initial='hidden'
+			whileInView='visible'
+			viewport={{ amount: 0.4, once: true }}
+			id='projects'
 		>
-			<div className="container">
+			<div className='container'>
 				<motion.h2 className={`${style.projectsTitle} title`} variants={slideLeft}>
 					Другие проекты<span className={style.redAccent}>.</span>
 				</motion.h2>
@@ -26,42 +26,40 @@ const AnotherProjects = () => {
 								key={project.id}
 								variants={slideUp}
 								custom={project.id - 0.9}
-								whileHover={{scale: 1.05}}
-								whileTap={{scale: 0.95}}
-								transition={{duration: 0.2}}
+								whileHover={{ scale: 1.05 }}
+								whileTap={{ scale: 0.95 }}
+								transition={{ duration: 0.2 }}
 							>
 								<h4 className={style.projectTitle}>{project.title}</h4>
 								<p className={style.projectDescription}>{project.description}</p>
 								<div className={style.projectTech}>
 									{project.tech.map((el, idx) => {
 										return (
-											<>
-												<span className={style.skills} key={idx}>
-													{el}
-												</span>
-											</>
+											<span className={style.skills} key={idx}>
+												{el}
+											</span>
 										);
 									})}
 								</div>
 								<div className={style.projectLinksBox}>
 									<a
 										href={project.linkToGithub}
-										target="_blank"
-										rel="noreferrer"
+										target='_blank'
+										rel='noreferrer'
 										className={style.projectLink}
 									>
 										<svg className={style.projectIcon}>
-											<use href={icons + '#github'} />
+											<use href={`${icons}#github`} />
 										</svg>
 									</a>
 									<a
 										href={project.linkToSite}
-										target="_blank"
-										rel="noreferrer"
+										target='_blank'
+										rel='noreferrer'
 										className={style.projectLink}
 									>
 										<svg className={style.projectIcon}>
-											<use href={icons + '#website-link'} />
+											<use href={`${icons}#website-link`} />
 										</svg>
 									</a>
 								</div>
@@ -72,6 +70,6 @@ const AnotherProjects = () => {
 			</div>
 		</motion.section>
 	);
-};
+}
 
 export default AnotherProjects;

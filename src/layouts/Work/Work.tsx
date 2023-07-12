@@ -1,21 +1,21 @@
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import React from 'react';
+import { experiences } from '../../constants';
+import { slideLeft, slideRight, textVariant } from '../../utils/motion';
 import icons from '../../assets/icons.svg';
 import secretSanta from '../../assets/secret-santa.jpg';
-import {experiences} from '../../constants';
-import {slideLeft, slideRight, textVariant} from '../../utils/motion';
 import style from './work.module.css';
 
-const Work = () => {
+function Work() {
 	return (
 		<motion.section
 			className={style.work}
-			initial="hidden"
-			whileInView="visible"
-			viewport={{amount: 0.8, once: true}}
-			id="work"
+			initial='hidden'
+			whileInView='visible'
+			viewport={{ amount: 0.8, once: true }}
+			id='work'
 		>
-			<div className="container">
+			<div className='container'>
 				<motion.h2
 					className={`${style.workTitle} title`}
 					variants={slideRight}
@@ -37,12 +37,12 @@ const Work = () => {
 
 									<a
 										href={item.linkToSite}
-										target="_blank"
-										rel="noreferrer"
+										target='_blank'
+										rel='noreferrer'
 										className={style.companyLink}
 									>
 										<svg className={style.companyLinkIcon}>
-											<use href={icons + '#website-link'} />
+											<use href={`${icons}#website-link`} />
 										</svg>
 									</a>
 								</motion.div>
@@ -70,11 +70,9 @@ const Work = () => {
 									>
 										{item.tech.map((el, idx) => {
 											return (
-												<>
-													<span className={style.skillsItem} key={idx}>
-														{el}
-													</span>
-												</>
+												<span className={style.skillsItem} key={idx}>
+													{el}
+												</span>
 											);
 										})}
 									</motion.div>
@@ -82,13 +80,13 @@ const Work = () => {
 
 								<motion.div className={style.workImgBox} variants={textVariant(0.3)}>
 									<a
-										href="https://secret-santa-1.netlify.app/"
-										target="_blank"
-										rel="noreferrer"
+										href='https://secret-santa-1.netlify.app/'
+										target='_blank'
+										rel='noreferrer'
 									>
 										<motion.img
 											src={secretSanta}
-											alt=""
+											alt=''
 											className={style.workImage}
 											variants={slideLeft}
 											custom={1.4}
@@ -102,6 +100,6 @@ const Work = () => {
 			</div>
 		</motion.section>
 	);
-};
+}
 
 export default Work;

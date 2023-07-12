@@ -1,5 +1,5 @@
 // vite.config.js
-import { defineConfig } from "file:///D:/frontend/esman-portfolio/node_modules/vite/dist/node/index.js";
+import { defineConfig } from "file:///D:/frontend/esman-portfolio/node_modules/vite/dist/node/index.ts";
 import react from "file:///D:/frontend/esman-portfolio/node_modules/@vitejs/plugin-react/dist/index.mjs";
 var vite_config_default = defineConfig({
   plugins: [react()]

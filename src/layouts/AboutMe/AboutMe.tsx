@@ -1,18 +1,19 @@
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import myself from '../../assets/myself.jpg';
-import {skills} from '../../constants';
-import {slideDown, slideLeft, slideRight, textVariant} from '../../utils/motion';
+import { skills } from '../../constants';
+import { slideDown, slideLeft, slideRight, textVariant } from '../../utils/motion';
 import style from './about.module.css';
-const AboutMe = () => {
+
+function AboutMe() {
 	return (
 		<motion.section
 			className={`${style.aboutMe}  `}
-			initial="hidden"
-			viewport={{amount: 0.4, once: true}}
-			whileInView="visible"
-			id="about"
+			initial='hidden'
+			viewport={{ amount: 0.4, once: true }}
+			whileInView='visible'
+			id='about'
 		>
-			<div className="container">
+			<div className='container'>
 				<motion.h2 className={`${style.aboutTitle} title`} variants={slideDown}>
 					Немного о себе<span className={style.titleAccent}>.</span>
 				</motion.h2>
@@ -20,7 +21,7 @@ const AboutMe = () => {
 					<motion.div className={style.imgBox} variants={textVariant(0.4)}>
 						<motion.img
 							src={myself}
-							alt=""
+							alt=''
 							className={style.img}
 							variants={slideRight}
 							custom={1.3}
@@ -69,9 +70,9 @@ const AboutMe = () => {
 
 						<motion.div
 							className={style.skills}
-							initial="hidden"
-							viewport={{amount: 0.6, once: true}}
-							whileInView="visible"
+							initial='hidden'
+							viewport={{ amount: 0.6, once: true }}
+							whileInView='visible'
 						>
 							<motion.h3 className={style.skillsTitle} variants={textVariant(0.5)}>
 								Некоторые навыки
@@ -81,11 +82,11 @@ const AboutMe = () => {
 								variants={textVariant(0.4)}
 								custom={1}
 							>
-								{skills.map((el:string) => {
+								{skills.map((el, index) => {
 									return (
-										<>
-											<span className={style.skillsItem}>{el}</span>
-										</>
+										<span className={style.skillsItem} key={index}>
+											{el}
+										</span>
 									);
 								})}
 							</motion.div>
@@ -95,6 +96,6 @@ const AboutMe = () => {
 			</div>
 		</motion.section>
 	);
-};
+}
 
 export default AboutMe;
